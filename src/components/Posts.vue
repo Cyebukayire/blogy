@@ -1,5 +1,4 @@
 <template>
-    <Header />
     <div class="container">
 
         <div class="blog-post">
@@ -10,7 +9,11 @@
             <div class="text-content">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
-                <p>#Javascript</p>
+                <!-- <p>#Javascript</p> -->
+                <div class="tags">
+                    <a href="#">#webdesign</a>
+                    <a href="#">#webdevelopment</a>
+                </div>
             </div>
         </div>
 
@@ -19,7 +22,11 @@
             <div class="text-content">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
-                <p>#Javascript</p>
+                <!-- <p>#Javascript</p> -->
+                <div class="tags">
+                    <a href="#">#webdesign</a>
+                    <a href="#">#webdevelopment</a>
+                </div>
             </div>
         </div>
 
@@ -31,7 +38,11 @@
             <div class="text-content">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
-                <p>#Javascript</p>
+                <!-- <p>#Javascript</p> -->
+                <div class="tags">
+                    <a href="#">#webdesign</a>
+                    <a href="#">#webdevelopment</a>
+                </div>
             </div>
         </div>
 
@@ -43,7 +54,11 @@
             <div class="text-content">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
-                <p>#Javascript</p>
+                <!-- <p>#Javascript</p> -->
+                <div class="tags">
+                    <a href="#">#webdesign</a>
+                    <a href="#">#webdevelopment</a>
+                </div>
             </div>
         </div>
 
@@ -55,7 +70,11 @@
             <div class="text-content">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
-                <p>#Javascript</p>
+                <!-- <p>#Javascript</p> -->
+                <div class="tags">
+                    <a href="#">#webdesign</a>
+                    <a href="#">#webdevelopment</a>
+                </div>
             </div>
         </div>
 
@@ -64,7 +83,11 @@
             <div class="text-content">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
-                <p>#Javascript</p>
+                <!-- <p>#Javascript</p> -->
+                <div class="tags">
+                    <a href="#">#webdesign</a>
+                    <a href="#">#webdevelopment</a>
+                </div>
             </div>
         </div>
 
@@ -73,7 +96,11 @@
             <div class="text-content">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
-                <p>#Javascript</p>
+                <!-- <p>#Javascript</p> -->
+                <div class="tags">
+                    <a href="#">#webdesign</a>
+                    <a href="#">#webdevelopment</a>
+                </div>
             </div>
         </div>
 
@@ -85,7 +112,11 @@
             <div class="text-content">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
-                <p>#Javascript</p>
+                <!-- <p>#Javascript</p> -->
+                <div class="tags">
+                    <a href="#">#webdesign</a>
+                    <a href="#">#webdevelopment</a>
+                </div>
             </div>
         </div>
 
@@ -97,12 +128,8 @@
 </template>
 
 <script>
-    import Header from './Header.vue'
     export default{
         name: 'Home',
-        components: {
-            Header,
-        }
     }
 </script>
 
@@ -111,13 +138,6 @@
         padding: 0;
         margin-top: 1em;
         box-sizing: border-box;
-    }
-    body{
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 100px 0;
     }
     .container{
         margin: 0 auto;
@@ -130,10 +150,11 @@
     }
     .blog-post{
         position: relative;
+        margin-bottom: 2em;
     }
     .blog-post img{
         width: 100%;
-        height: 350px;
+        height: 400px;
         object-fit: cover;
         border-radius: 10px;
     }
@@ -160,6 +181,8 @@
         border-radius: 10px;
         box-shadow: 1px 1px 8px rgba(0,0,0,0.08);
         padding-top: 1px;
+        box-shadow:20px 20px 50px 15px rgba(102, 154, 202, 0.576);  
+
     }
     .text-content h2{
         font-size: 18px;
@@ -182,14 +205,27 @@
         left: 35px;
     }
 
-    p{
+    /* p{
         background-color: rgba(25, 110, 247, 0.301);
         color: rgb(95, 92, 92);
         height: 2em;
         text-align: center;
         padding: 0.5em;
         border-radius: 20px;
-    }
+    } */
+
+
+.tags a{
+    color: #888;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: 0.3s ease;
+}
+
+.tags a:hover{
+    color: rgba(106, 175, 240, 0.803);
+}
     @media screen and (max-width: 1100px) {
         .container{
             grid-template-columns: 1fr 1fr;
