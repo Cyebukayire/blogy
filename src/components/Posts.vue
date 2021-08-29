@@ -126,6 +126,7 @@
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 20px;
         max-width: 1300px;
+        margin-bottom: 5em;
     }
     .blog-post{
         position: relative;
@@ -182,8 +183,8 @@
     }
 
     p{
-        background-color: rgba(51, 51, 51, 0.699);
-        color: rgb(218, 210, 210);
+        background-color: rgba(25, 110, 247, 0.301);
+        color: rgb(95, 92, 92);
         height: 2em;
         text-align: center;
         padding: 0.5em;

@@ -1,60 +1,153 @@
 <template>
-    <footer>
-	<div class="content">
-		<div class="top">
-			<div class="logo-details">
-				<span class="logo_name">Sitesoch</span>
-			</div>
-			<div class="media-icons">
-				<a href="#"><i class="fa fa-facebook"></i></a>
-				<a href="#"><i class="fa fa-twitter"></i></a>
-				<a href="#"><i class="fa fa-instagram"></i></a>
-				<a href="#"><i class="fa fa-linkedin"></i></a>
-				<a href="#"><i class="fa fa-youtube"></i></a>
-			</div>
-		</div>
-
-		<div class="link-boxes">
-			<ul class="box">
-				<li class="link_name">Links</li>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Get Started</a></li>
-			</ul>
-			<ul class="box">
-				<li class="link_name">Services</li>
-				<li><a href="#">App Design</a></li>
-				<li><a href="#">Web Design</a></li>
-				<li><a href="#">Logo Design</a></li>
-				<li><a href="#">Banner Design</a></li>			
-			</ul>
-	        <ul class="box">
-				<li class="link_name">Other services</li>
-				<li><a href="#">SEO</a></li>
-				<li><a href="#">Content Marketing</a></li>
-				<li><a href="#">Prints</a></li>
-				<li><a href="#">Social Media</a></li>			
-			</ul>
-			<ul class="box">
-				<li class="link_name">Contact</li>
-				<li><a href="#">+91 8879887262</a></li>
-				<li><a href="#">+91 8879887262</a></li>
-				<li><a href="#">contact@sitesoch.com</a></li>
-			</ul>	
-		</div>
-
-	</div>
-
-	<div class="bottom-details">
-      <div class="bottom_text">
-        <span class="copyright_text">Copyright © 2021 <a href="#">Sitesoch.</a></span>
-        <span class="policy_terms">
-          <a href="#">Privacy policy</a>
-          
-        </span>
+ <div class="footer">
+      <div class="heading">
+        <h2>Blogy</h2>
       </div>
+      <div class="content">
+        <div class="services">
+          <h4>Services</h4>
+          <p><a href="#">App developmen</a></p>
+          <p><a href="#">Web development</a></p>
+          <p><a href="#">DevOps</a></p>
+          <p><a href="#">Web designing</a></p>
+        </div>
+        <div class="social-media">
+          <h4>Social</h4>
+          <p>
+            <a href="#"
+              ><i class="fab fa-linkedin"></i> Linkedin</a
+            >
+          </p>
+          <p>
+            <a href="#"
+              ><i class="fab fa-twitter"></i> Twitter</a
+            >
+          </p>
+          <p>
+            <a href="https://github.com/Cyebukayire"
+              ><i class="fab fa-github"></i> Github</a
+            >
+          </p>
+          <p>
+            <a href="#"
+              ><i class="fab fa-instagram"></i> Instagram</a
+            >
+          </p>
+        </div>
+        <div class="links">
+          <h4>Quick links</h4>
+          <p><a href="#">Home</a></p>
+          <p><a href="#">About</a></p>
+          <p><a href="#">Blogs</a></p>
+          <p><a href="#">Contact</a></p>
+        </div>
+        <div class="details">
+          <h4 class="address">Address</h4>
+          <p>
+            Lorem ipsum dolor sit amet  <br />
+            adipisicing elit.
+          </p>
+          <h4 class="mobile">Mobile</h4>
+          <p><a href="#">+250792233445</a></p>
+          <h4 class="mail">Email</h4>
+          <p><a href="#">blogy@business.com</a></p>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        &copy; 2021 Blogy @ Vue Designs.
+      </footer>
     </div>
-    
-</footer>
 </template>
+
+<style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+  /* position: fixed; */
+background: linear-gradient(
+        to right bottom,
+        rgba(10, 233, 155, 0.35),
+        rgba(25, 110, 247, 0.494)
+    );
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.footer .heading {
+    color:rgb(240, 240, 240);
+  max-width: 1010px;
+  width: 90%;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding-top: 3rem;
+  margin-bottom: 3rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.footer .content {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem;
+}
+
+.footer .content p {
+  margin-bottom: 1.3rem;
+  color: rgba(0, 0, 0, 0.829);
+}
+
+.footer .content a {
+  text-decoration: none;
+  color: rgb(0, 0, 0, 0.829);
+}
+
+.footer .content a:hover {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.829);
+}
+
+.footer .content h4 {
+  margin-bottom: 1.3rem;
+  font-size: 19px;
+  color:rgb(138, 141, 138);
+}
+
+footer {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+footer hr {
+  margin: 2rem 0;
+}
+
+@media (max-width: 767px) {
+  .footer .content {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+
+  .footer {
+    position: unset;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer .content,
+  .footer {
+    font-size: 14px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .footer {
+    position: unset;
+  }
+}
+
+</style>

@@ -3,10 +3,10 @@
     <header>
         <nav>
             <a href="#">All</a>
-            <a href="#">Javascript</a>
-            <a href="#">Python</a>
-            <a href="#">Java</a>
-            <a href="#">Vue</a>
+            <a href="#">App development</a>
+            <a href="#">Web developent</a>
+            <a href="#">DevOps</a>
+            <a href="#">Web Designs</a>
         </nav>
     </header>
 </template>
