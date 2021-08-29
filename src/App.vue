@@ -1,14 +1,17 @@
 <template>
   <Posts />
+  <Footer />
 </template>
 
 <script>
 import Posts from './components/Posts.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
     Posts,
+    Footer,
   }
 }
 </script>
