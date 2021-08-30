@@ -1,14 +1,14 @@
 <template>
   <Navbar />
   <Posts />
-  <Navigation />
+  <Pagination />
   <Footer />
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
 import Posts from './components/Posts.vue'
-import Navigation from './components/Navigation.vue'
+import Pagination from './components/Pagination.vue'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -16,7 +16,7 @@ export default {
   components: {
     Navbar,
     Posts,
-    Navigation,
+    Pagination,
     Footer,
   }
 }
