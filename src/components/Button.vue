@@ -1,6 +1,5 @@
 <template>
-<button>Read more</button>    
-<button>{{ }}</button>    
+<button  @click="onClick()">{{ text }}</button>    
 </template>
 
 <script>
@@ -9,11 +8,14 @@
         props: {
             text: String,
         },
+
+        methods: {
+            onClick() {
+                console.log("Read more button is pressed")
+            }
+        }
     }
 </script>
 
-<style>
-    button {
-        background-color:aqua;
-    }
+<style scoped>
 </style>
