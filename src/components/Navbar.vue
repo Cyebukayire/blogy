@@ -2,7 +2,7 @@
         <!-- <h3>Posts</h3> -->
     <header>
         <nav>
-            <a href="#">All</a>
+            <a @click="onClick()" href="#">All</a>
             <a href="#">App development</a>
             <a href="#">Web developent</a>
             <a href="#">DevOps</a>
@@ -13,8 +13,15 @@
 
 <script>
     export default {
-        name: 'Header'
+        name: 'Header',
+
+        methods: {
+            onClick() {
+                console.log("Navbar Link Clicked")
+            },
+        }
     }
+    
 </script>
 
 <style scoped>
