@@ -3,10 +3,10 @@
     <header>
         <nav>
             <a @click="onClick()" href="#">All</a>
-            <a href="#">App development</a>
-            <a href="#">Web developent</a>
-            <a href="#">DevOps</a>
-            <a href="#">Web Designs</a>
+            <a @click="onClick()" href="#">App development</a>
+            <a @click="onClick()" href="#">Web developent</a>
+            <a @click="onClick()" href="#">DevOps</a>
+            <a @click="onClick()" href="#">Web Designs</a>
         </nav>
     </header>
 </template>

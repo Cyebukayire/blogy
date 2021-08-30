@@ -1,5 +1,5 @@
 <template>
-  <!-- <Header /> -->
+  <Header />
   <Navbar />
   <Posts />
   <Pagination />
@@ -7,7 +7,7 @@
 </template>
 
 <script>
-// import Header from './components/Header.vue'
+import Header from './components/Header.vue'
 import Navbar from './components/Navbar.vue'
 import Posts from './components/Posts.vue'
 import Pagination from './components/Pagination.vue'
@@ -16,7 +16,7 @@ import Footer from './components/Footer.vue'
 export default {
   name: 'App',
   components: {
-    // Header,
+    Header,
     Navbar,
     Posts,
     Pagination,
@@ -32,6 +32,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

@@ -3,16 +3,16 @@
 
         <div class="blog-post">
             <img src="../assets/code.jpeg" alt="Man">
-            <a href="#" class="category">
+            <p class="category">
                 New
-            </a>
+            </p>
             <div class="text-content">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
                 <!-- <p>#Javascript</p> -->
+                <Button text="Readmore" />
                 <div class="tags">
                     <a href="#">#webdesign</a>
-                    <a href="#">#webdevelopment</a>
                 </div>
             </div>
         </div>
@@ -24,7 +24,6 @@
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
                 <!-- <p>#Javascript</p> -->
                 <div class="tags">
-                    <a href="#">#webdesign</a>
                     <a href="#">#webdevelopment</a>
                 </div>
             </div>
@@ -32,15 +31,14 @@
 
         <div class="blog-post">
             <img src="../assets/code.jpeg" alt="Man">
-            <a href="#" class="category">
+            <p class="category">
                 New
-            </a>
+            </p>
             <div class="text-content">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
                 <!-- <p>#Javascript</p> -->
                 <div class="tags">
-                    <a href="#">#webdesign</a>
                     <a href="#">#webdevelopment</a>
                 </div>
             </div>
@@ -48,31 +46,29 @@
 
         <div class="blog-post">
             <img src="../assets/code2.jpeg" alt="Man">
-            <a href="#" class="category">
+            <p class="category">
                 New
-            </a>
+            </p>
             <div class="text-content">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
                 <!-- <p>#Javascript</p> -->
                 <div class="tags">
                     <a href="#">#webdesign</a>
-                    <a href="#">#webdevelopment</a>
                 </div>
             </div>
         </div>
 
         <div class="blog-post">
             <img src="../assets/code.jpeg" alt="Man">
-            <a href="#" class="category">
+            <p class="category">
                 New
-            </a>
+            </p>
             <div class="text-content">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
                 <!-- <p>#Javascript</p> -->
                 <div class="tags">
-                    <a href="#">#webdesign</a>
                     <a href="#">#webdevelopment</a>
                 </div>
             </div>
@@ -85,7 +81,6 @@
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
                 <!-- <p>#Javascript</p> -->
                 <div class="tags">
-                    <a href="#">#webdesign</a>
                     <a href="#">#webdevelopment</a>
                 </div>
             </div>
@@ -98,7 +93,6 @@
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
                 <!-- <p>#Javascript</p> -->
                 <div class="tags">
-                    <a href="#">#webdesign</a>
                     <a href="#">#webdevelopment</a>
                 </div>
             </div>
@@ -106,16 +100,15 @@
 
         <div class="blog-post">
             <img src="../assets/code3.jpeg" alt="Man">
-            <a href="#" class="category">
+            <p class="category">
                 New
-            </a>
+            </p>
             <div class="text-content">
                 <h1>Lorem ipsum dolor sit amet.</h1>
                 <h2 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas autem corrupti quod distinctio eius hic!</h2>
                 <!-- <p>#Javascript</p> -->
                 <div class="tags">
                     <a href="#">#webdesign</a>
-                    <a href="#">#webdevelopment</a>
                 </div>
             </div>
         </div>
@@ -128,8 +121,13 @@
 </template>
 
 <script>
+import Button from './Button.vue'
+
     export default{
         name: 'Home',
+        components: {
+            Button,
+        }
     }
 </script>
 
