@@ -1,7 +1,9 @@
 <template>
   <Header />
   <Navbar />
+  <div class="container" >
   <Posts :posts="posts"/>
+  </div>
   <Pagination />
   <Footer />
 </template>
@@ -28,37 +30,25 @@ export default {
     }
   },
 
-  created() {
-    this.posts = [
-      {
-        id: 1,
-        category: "New",
-        title: "Loremloremloremloremloremlorem",
-        description: "Loremlor emloremloreml oremloreml oremloremloreml oremloremlorem",
-        tag: 'Webdesign',
-      },
-      {
-        id: 1,
-        category: "New",
-        title: "Loremloremloremloremloremlorem",
-        description: "Loremlo remloremlorem loremloremlo remloreml oremloremloremlorem",
-        tag: 'Webdesign',
-      },
-      {
-        id: 1,
-        category: "New",
-        title: "Loremloremloremloremloremlorem",
-        description: "Loremloremloremloremlorem loremloremloremlo remloremloremlorem",
-        tag: 'Webdesign',
-      },
-      {
-        id: 1,
-        category: "New",
-        title: "Loremloremloremloremloremlorem",
-        description: "Loremloremloreml oremloremloremloremloreml oremloremloremlorem",
-        tag: 'Webdesign',
-      },
-    ]
+  methods: {
+    async fetchPosts() {
+      const res = await fetch('api/posts')
+
+      const data = await res.json()
+      
+      return data
+    },
+    async fetchPost(id) {
+    const res = await fetch(`api/posts/${id}`)
+
+    const data = await res.json()
+      
+    return data
+    }
+  },
+
+  async created() {
+    this.posts = await this.fetchPosts()
   }
 }
 </script>
@@ -95,4 +85,27 @@ export default {
   width: 100%;
 }
 
+
+.container{
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    max-width: 1300px;
+    margin-bottom: 5em;
+}
+
+@media screen and (max-width: 1100px) {
+    .container{
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 60px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-row-gap: 60px;
+    }
+}
 </style>

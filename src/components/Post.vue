@@ -1,28 +1,32 @@
 <template>
-    <div class="container" >
-        <div class="blog-post">
-            <img src="../assets/code.jpeg" alt="Man">
-            <p class="category">
-                {{post.category}}
-            </p>
-            <div class="text-content">
-                <h1>{{post.title}}</h1>
-                <h2 class="post-title">{{post.description}}</h2>
-                <!-- <p>#Javascript</p> -->
-                <Button class="btn" text="Read more" />
-                <div class="tags">
-                    <a href="#">#{{post.tag}}</a>
-                </div>
+    <div class="blog-post">
+        <!-- <img v-bind:src="post.image" alt="Man"> -->
+        <img src="../assets/code2.jpeg" alt="Man">
+        <p class="category">
+            {{post.category}}
+        </p>
+        <div class="text-content">
+            <h1>{{post.title}}</h1>
+            <h2 class="post-title">{{post.description}}</h2>
+            <Button class="btn" text="Read more" />
+            <div class="tags">
+                <a href="#">#{{post.tag}}</a>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import Button from './Button.vue'
+
     export default {
         name: 'Post',
         props: {
             post: Object,
+        },
+
+        components: {
+            Button,
         }
     }
 </script>
@@ -33,22 +37,13 @@
         margin-top: 1em;
         box-sizing: border-box;
     }
-    .container{
-        margin: 0 auto;
-        padding: 0 20px;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 20px;
-        max-width: 1300px;
-        margin-bottom: 5em;
-    }
     .blog-post{
         position: relative;
         margin-bottom: 2em;
     }
     .blog-post img{
         width: 100%;
-        height: 400px;
+        height: 450px;
         object-fit: cover;
         border-radius: 10px;
     }
@@ -87,7 +82,6 @@
         color:rgb(29, 28, 28);
         font-size: 17px;
         font-weight: 700;
-        /* margin-bottom: 2px;         */
     }
     .text-content img{
         height: 70px;
@@ -98,16 +92,6 @@
         top: -35px;
         left: 35px;
     }
-
-    /* p{
-        background-color: rgba(25, 110, 247, 0.301);
-        color: rgb(95, 92, 92);
-        height: 2em;
-        text-align: center;
-        padding: 0.5em;
-        border-radius: 20px;
-    } */
-
 
 .tags a{
     color: #888;
@@ -120,17 +104,5 @@
 .tags a:hover{
     color: rgba(106, 175, 240, 0.803);
 }
-    @media screen and (max-width: 1100px) {
-        .container{
-            grid-template-columns: 1fr 1fr;
-            grid-row-gap: 60px;
-        }
-    }
-    @media screen and (max-width: 600px) {
-        .container{
-            grid-template-columns: 1fr;
-            grid-row-gap: 60px;
-        }
-    }
 
 </style>
