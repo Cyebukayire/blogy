@@ -8,7 +8,8 @@
         <div class="text-content">
             <h1>{{post.title}}</h1>
             <h2 class="post-title">{{post.description}}</h2>
-            <Button class="btn" text="Read more" />
+            <!-- <Button class="btn" text="Read more" /> -->
+            <router-link class="btn" to="/post">Read More</router-link>
             <div class="tags">
                 <a href="#">#{{post.tag}}</a>
             </div>
@@ -17,7 +18,7 @@
 </template>
 
 <script>
-import Button from './Button.vue'
+// import Button from './Button.vue'
 
     export default {
         name: 'Post',
@@ -26,7 +27,7 @@ import Button from './Button.vue'
         },
 
         components: {
-            Button,
+            // Button,
         }
     }
 </script>
