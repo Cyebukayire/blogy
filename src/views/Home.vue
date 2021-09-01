@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <Header title="Welcome To Blogy"/>
   <Navbar />
   <div class="container" >
   <Posts :posts="posts"/>

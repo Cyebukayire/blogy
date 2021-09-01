@@ -9,7 +9,7 @@
             <h1>{{post.title}}</h1>
             <h2 class="post-title">{{post.body}}</h2>
             <!-- <Button class="btn" text="Read more" /> -->
-            <router-link class="btn" to="/postDetails" title="post.title" body="post.body">Read More</router-link>
+            <router-link class="btn" to="/postDetails">Read More</router-link>
             <div class="tags">
                 <a href="#">#Webdesign</a>
             </div>
@@ -104,29 +104,6 @@
 
 .tags a:hover{
     color: rgba(106, 175, 240, 0.803);
-}
-
-.btn {
-  display: inline-block;
-  color: rgb(111, 111, 111);
-  border: 3px solid rgba(25, 110, 247, 0.426);
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: inherit;
-}
-
-.btn:active {
-  transform: scale(0.8);
-  border: 3px solid rgba(10, 233, 155, 0.303);
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
 }
 
 </style>

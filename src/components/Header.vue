@@ -1,13 +1,16 @@
 <template>
     <div class="hero">
-      <h1>Welcome To Blogy</h1>
+      <h1>{{title}}</h1>
       <h3>Read - Unlearn - Learn</h3>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Header'
+    name: 'Header',
+    props: {
+        title: String,
+    },
 }
 </script>
 

@@ -25,29 +25,6 @@ export default {
   margin:0;
 }
 
-.btn {
-  display: inline-block;
-  color: rgb(111, 111, 111);
-  border: 3px solid rgba(25, 110, 247, 0.426);
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: inherit;
-}
-
-.btn:active {
-  transform: scale(0.8);
-  border: 3px solid rgba(10, 233, 155, 0.303);
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
-}
-
 
 .container{
     margin: 0 auto;
