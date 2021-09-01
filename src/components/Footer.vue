@@ -38,7 +38,7 @@
           <h4>Quick links</h4>
           <p><a href="#">Home</a></p>
           <p><a href="#">About</a></p>
-          <p><a href="#">Blogs</a></p>
+          <p><router-link to="/postDetails">Blogs</router-link></p>
           <p><a href="#">Contact</a></p>
         </div>
         <div class="details">

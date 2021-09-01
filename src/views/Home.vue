@@ -1,11 +1,10 @@
 <template>
-    <h1>Single Post page</h1>
-    <router-link to="/">Go Back</router-link>
+    <h1>Home Page</h1>
 </template>
 
 <script>
     export default {
-        name: 'Post'
+        name: 'Home',
     }
 </script>
 
@@ -14,5 +13,6 @@ h1{
     color:red;
     background-color: black;
     font-size: 100px;
+    /* +250788404704 Innocent */
 }
 </style>

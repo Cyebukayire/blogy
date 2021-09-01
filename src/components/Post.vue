@@ -3,15 +3,15 @@
         <!-- <img v-bind:src="post.image" alt="Man"> -->
         <img src="../assets/code2.jpeg" alt="Man">
         <p class="category">
-            {{post.category}}
+            New
         </p>
         <div class="text-content">
             <h1>{{post.title}}</h1>
-            <h2 class="post-title">{{post.description}}</h2>
+            <h2 class="post-title">{{post.body}}</h2>
             <!-- <Button class="btn" text="Read more" /> -->
-            <router-link class="btn" to="/post">Read More</router-link>
+            <router-link class="btn" to="/postDetails">Read More</router-link>
             <div class="tags">
-                <a href="#">#{{post.tag}}</a>
+                <a href="#">#Webdesign</a>
             </div>
         </div>
     </div>

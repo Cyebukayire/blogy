@@ -33,14 +33,14 @@ export default {
 
   methods: {
     async fetchPosts() {
-      const res = await fetch('api/posts')
+      const res = await fetch('https://jsonplaceholder.typicode.com/posts')
 
       const data = await res.json()
       
       return data
     },
     async fetchPost(id) {
-    const res = await fetch(`api/posts/${id}`)
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
 
     const data = await res.json()
       
