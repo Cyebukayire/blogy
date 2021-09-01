@@ -1,56 +1,16 @@
 <template>
-  <Header />
-  <Navbar />
-  <div class="container" >
-  <Posts :posts="posts"/>
-  </div>
-  <Pagination />
   <router-view></router-view>
   <Footer />
 </template>
   
 <script>
-import Header from './components/Header.vue'
-import Navbar from './components/Navbar.vue'
-import Posts from './components/Posts.vue'
-import Pagination from './components/Pagination.vue'
 import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
   components: {
-    Header,
-    Navbar,
-    Posts,
-    Pagination,
     Footer,
   },
-  data() {
-    return {
-      posts: []
-    }
-  },
-
-  methods: {
-    async fetchPosts() {
-      const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-
-      const data = await res.json()
-      
-      return data
-    },
-    async fetchPost(id) {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-
-    const data = await res.json()
-      
-    return data
-    }
-  },
-
-  async created() {
-    this.posts = await this.fetchPosts()
-  }
 }
 </script>
 
@@ -97,6 +57,13 @@ export default {
     grid-gap: 20px;
     max-width: 1300px;
     margin-bottom: 5em;
+}
+
+@media screen and (min-width: 1100px) {
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 60px;
+    }
 }
 
 @media screen and (max-width: 1100px) {
