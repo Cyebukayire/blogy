@@ -33,7 +33,7 @@
 
 /* Header */
 
-.hero {
+.header {
 height: 100vh;
 width: cover;
 background-image: linear-gradient(
@@ -338,13 +338,70 @@ width: 100%;
 
 
   /* POST DETAILS */
-  .post_title {
-      padding: 3rem;
-      color:black;
-  }
-  .post_details{
-    font-size: 20px;
-    margin:2em;
+
+.single-post{
+    position: relative;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(1fr, 1fr);
+    grid-gap: 20px;
+    max-width: 1300px;
+    margin-bottom: 5em;
+}
+.single-post img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.single-post .category{
+    position: absolute;
+    top: 100px;
+    left: 30rem;
+    padding: 10px 15px;
+    font-size: 14px;    
+    text-decoration: none;
+    background-color: rgba(10, 233, 155, 0.508);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+}
+.post-content{
+    position: absolute;
+    bottom: -30px;
+    padding: 20px;
+    background-color: #fff;
+    width: calc(100% - 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.08);
+    padding-top: 1px;
+    box-shadow:20px 20px 50px 15px rgba(102, 154, 202, 0.576);  
+
+}
+.post-content h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.post-content h1{
+    color:rgb(29, 28, 28);
+    font-size: 17px;
+    font-weight: 700;
+    padding: 1.2rem;
+
+}
+.post-content img{
+    height: 70px;
+    width: 70px;
+    border: 5px solid rgba(0,0,0,0.1);
+    border-radius: 0;
+    position: absolute;
+    top: -35px;
+    left: 35px;
 }
   
   @media (max-width: 767px) {
