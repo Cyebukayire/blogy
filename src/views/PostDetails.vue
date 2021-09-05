@@ -1,12 +1,12 @@
 <template>
   <Header title="Lorem ipsum dolor sit amet"/>
-  <h1>Lorem ipsum dolor sit amet.</h1>
-  <div class="body">
+  <h1 class="post_title">Lorem ipsum dolor sit amet.</h1>
+  <div class="post_details">
      {{body}}
   </div>  
   
-  <h1>Lorem ipsum dolor sit amet.</h1>
-  <div class="body">
+  <h1 class="post_title">Lorem ipsum dolor sit amet.</h1>
+  <div class="post_details">
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
        Aut, veniam. Nam tenetur esse accusantium vitae, rem non 
        consequatur eveniet nostrum. Exercitationem quae tempora, 
@@ -47,11 +47,3 @@ import Header from '../components/Header.vue'
         }
     }
 </script>
-
-<style scoped>
-.body{
-    font-size: 20px;
-    margin:2em;
-}
-
-</style>

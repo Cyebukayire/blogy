@@ -17,6 +17,3 @@ import Post from './Post.vue'
         }
     }
 </script>
-
-<style scoped>
-</style>

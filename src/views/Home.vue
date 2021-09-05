@@ -50,7 +50,3 @@ import Pagination from '../components/Pagination.vue'
     }
 
 </script>
-
-<style scoped>
-
-</style>
