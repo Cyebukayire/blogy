@@ -10,7 +10,7 @@
 <script>
 import Header from '../components/Header.vue'
 import Navbar from '../components/Navbar.vue'
-import Posts from '../components/Posts.vue'
+import Posts from '../components/Post.vue'
 import Pagination from '../components/Pagination.vue'
 
     export default {
@@ -19,7 +19,7 @@ import Pagination from '../components/Pagination.vue'
             Header,
             Navbar,
             Posts,
-            Pagination
+            Pagination,
         },
         data() {
             return {
