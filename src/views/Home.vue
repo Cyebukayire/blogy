@@ -53,7 +53,7 @@ import Pagination from '../components/Pagination.vue'
         },
 
         async created() {
-            // this.posts = this.$store.state.posts
+            // this.posts = await this.fetchPosts()
         },
         computed: {
             posts() {
