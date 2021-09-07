@@ -1,5 +1,5 @@
 <template>
-<button  @click="onClick()">{{ text }}</button>    
+<button>{{ text }}</button>    
 </template>
 
 <script>
@@ -7,12 +7,6 @@
         name: 'Button',
         props: {
             text: String,
-        },
-
-        methods: {
-            onClick() {
-                console.log("Read more button is pressed")
-            }
         }
     }
 </script>

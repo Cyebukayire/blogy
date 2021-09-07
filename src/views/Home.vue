@@ -2,7 +2,7 @@
   <Header title="Welcome To Blogy"/>
   <Navbar />
   <div class="container" >
-  <Posts :posts="posts"/>
+  <Posts @delete-post="deletePost" :posts="posts"/>
   </div>
   <Pagination />
 </template>
@@ -10,7 +10,7 @@
 <script>
 import Header from '../components/Header.vue'
 import Navbar from '../components/Navbar.vue'
-import Posts from '../components/Post.vue'
+import Posts from '../components/Posts.vue'
 import Pagination from '../components/Pagination.vue'
 
     export default {
@@ -35,12 +35,19 @@ import Pagination from '../components/Pagination.vue'
             
             return data
             },
+
             async fetchPost(id) {
             const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
 
             const data = await res.json()
             
             return data
+            },
+
+            deletePost(id) {
+                if(confirm("The post will be deleted.")){
+                    this.posts = this.posts.filter((post) => post.id !== id)
+                }
             }
         },
 
