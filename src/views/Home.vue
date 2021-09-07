@@ -12,6 +12,7 @@ import Header from '../components/Header.vue'
 import Navbar from '../components/Navbar.vue'
 import Posts from '../components/Posts.vue'
 import Pagination from '../components/Pagination.vue'
+// import mapState from 'vuex'
 
     export default {
         name: 'Home',
@@ -23,7 +24,7 @@ import Pagination from '../components/Pagination.vue'
         },
         data() {
             return {
-            posts: []
+            // posts: []
             }
         },
 
@@ -52,8 +53,13 @@ import Pagination from '../components/Pagination.vue'
         },
 
         async created() {
-            this.posts = await this.fetchPosts()
-        }
+            // this.posts = this.$store.state.posts
+        },
+        computed: {
+            posts() {
+                return this.$store.state.posts 
+            },
+        },
     }
 
 </script>
