@@ -12,7 +12,7 @@ import Header from '../components/Header.vue'
 import Navbar from '../components/Navbar.vue'
 import Posts from '../components/Posts.vue'
 import Pagination from '../components/Pagination.vue'
-// import mapState from 'vuex'
+import { mapActions, mapState } from 'vuex'
 
     export default {
         name: 'Home',
@@ -29,6 +29,8 @@ import Pagination from '../components/Pagination.vue'
         },
 
         methods: {
+            ...mapActions(['getPostsAction']),
+
             async fetchPosts() {
             const res = await fetch('https://jsonplaceholder.typicode.com/posts')
 
@@ -48,17 +50,21 @@ import Pagination from '../components/Pagination.vue'
             deletePost(id) {
                 if(confirm("The post will be deleted.")){
                     this.posts = this.posts.filter((post) => post.id !== id)
+                    console.log("Post: ", id, "deleted")
                 }
             }
         },
 
         async created() {
             // this.posts = await this.fetchPosts()
+            await this.$store.dispatch('getPostsAction')
+            // await this.getPostsAction;
         },
         computed: {
-            posts() {
-                return this.$store.state.posts 
-            },
+            ...mapState({ posts: 'posts' })
+            // posts() {
+            //     return this.$store.state.posts 
+            // },
         },
     }
 
